@@ -1,0 +1,45 @@
+package a-skua:koyomi@0.1.0;
+
+interface convert {
+    enum month {
+        january,
+        february,
+        march,
+        april,
+        may,
+        june,
+        july,
+        august,
+        september,
+        october,
+        november,
+        december,
+    }
+
+    enum era {
+        meiji,
+        taisho,
+        showa,
+        heisei,
+        reiwa,
+    }
+
+    resource western-date {
+        constructor(year: s32, month: month, day: u8);
+        year: func() -> s32;
+        month: func() -> month;
+        day: func() -> u8;
+        to-wareki: func() -> result<wareki-date, string>;
+        to-string: func() -> string;
+    }
+
+    resource wareki-date {
+        constructor(era: era, year: s32, month: month, day: u8);
+        era: func() -> era;
+        year: func() -> s32;
+        month: func() -> month;
+        day: func() -> u8;
+        to-seireki: func() -> result<western-date, string>;
+        to-string: func() -> string;
+    }
+}
