@@ -50,3 +50,15 @@ wasmtime run bin/convert.wasm -- -w 令和元年5月1日
 wasmtime run bin/convert.wasm -- -w 令和1年5月1日
 # 2019-05-01
 ```
+
+### With wasm-pkg-runner
+
+You can also run with [wasm-pkg-runner](https://github.com/a-skua/wasm-pkg-runner):
+
+```sh
+wa run convert -s 2019-05-01
+# 令和元年5月1日
+
+wa run convert -w 令和元年5月1日
+# 2019-05-01
+```
