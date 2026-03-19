@@ -30,9 +30,9 @@ jobs:
         env:
           BINSTALL_VERSION: 1.17.7
 
-      - run: cargo binstall wkg@0.15.0 -y
+      - run: cargo binstall wasm-tools@1.245.1 -y
 
-      - run: make clean build
+      - run: make build
 
       - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
