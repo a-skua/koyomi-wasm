@@ -1,0 +1,9 @@
+package example:composition;
+
+let koyomi = new a-skua:koyomi { ... };
+let app = new example:convert {
+    "a-skua:koyomi/convert@0.1.0": koyomi["a-skua:koyomi/convert@0.1.0"],
+    ...
+};
+
+export app...;

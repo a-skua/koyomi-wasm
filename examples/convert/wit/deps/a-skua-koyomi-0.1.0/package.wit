@@ -1,0 +1,77 @@
+package a-skua:koyomi@0.1.0;
+
+interface convert {
+  enum month {
+    january,
+    february,
+    march,
+    april,
+    may,
+    june,
+    july,
+    august,
+    september,
+    october,
+    november,
+    december,
+  }
+
+  enum era {
+    meiji,
+    taisho,
+    showa,
+    heisei,
+    reiwa,
+  }
+
+  resource western-date {
+    constructor(year: s32, month: month, day: u8);
+    year: func() -> s32;
+    month: func() -> month;
+    day: func() -> u8;
+    to-wareki: func() -> result<wareki-date, string>;
+    to-string: func() -> string;
+  }
+
+  resource wareki-date {
+    constructor(era: era, year: s32, month: month, day: u8);
+    era: func() -> era;
+    year: func() -> s32;
+    month: func() -> month;
+    day: func() -> u8;
+    to-seireki: func() -> result<western-date, string>;
+    to-string: func() -> string;
+  }
+}
+
+world convertor {
+  import wasi:cli/environment@0.2.0;
+  import wasi:cli/exit@0.2.0;
+  import wasi:io/error@0.2.0;
+  import wasi:io/poll@0.2.0;
+  import wasi:io/streams@0.2.0;
+  import wasi:cli/stdin@0.2.0;
+  import wasi:cli/stdout@0.2.0;
+  import wasi:cli/stderr@0.2.0;
+  import wasi:cli/terminal-input@0.2.0;
+  import wasi:cli/terminal-output@0.2.0;
+  import wasi:cli/terminal-stdin@0.2.0;
+  import wasi:cli/terminal-stdout@0.2.0;
+  import wasi:cli/terminal-stderr@0.2.0;
+  import wasi:clocks/monotonic-clock@0.2.0;
+  import wasi:clocks/wall-clock@0.2.0;
+  import wasi:filesystem/types@0.2.0;
+  import wasi:filesystem/preopens@0.2.0;
+  import wasi:sockets/network@0.2.0;
+  import wasi:sockets/instance-network@0.2.0;
+  import wasi:sockets/udp@0.2.0;
+  import wasi:sockets/udp-create-socket@0.2.0;
+  import wasi:sockets/tcp@0.2.0;
+  import wasi:sockets/tcp-create-socket@0.2.0;
+  import wasi:sockets/ip-name-lookup@0.2.0;
+  import wasi:random/random@0.2.0;
+  import wasi:random/insecure@0.2.0;
+  import wasi:random/insecure-seed@0.2.0;
+
+  export convert;
+}

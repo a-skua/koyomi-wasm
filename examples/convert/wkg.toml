@@ -1,0 +1,9 @@
+# e.g. `wkg config --edit`
+# ```toml
+# [namespace_registries.a-skua]
+# registry = "ghcr.io"
+#
+# [namespace_registries.a-skua.metadata]
+# preferredProtocol = "oci"
+# oci = { registry = "ghcr.io" }
+# ```

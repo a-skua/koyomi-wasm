@@ -46,6 +46,18 @@ interface convert {
 make build
 ```
 
+## Examples
+
+See [examples/convert](examples/convert) for a CLI tool that converts between Western and Japanese era dates.
+
+```sh
+wasmtime run bin/convert.wasm -s 2019-05-01
+# 令和元年5月1日
+
+wasmtime run bin/convert.wasm -w 令和元年5月1日
+# 2019-05-01
+```
+
 ## License
 
 [Apache License 2.0](LICENSE)

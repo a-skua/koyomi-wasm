@@ -1,0 +1,2 @@
+[packages.convert]
+path = "./bin/convert.wasm"
