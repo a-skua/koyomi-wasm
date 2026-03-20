@@ -16,14 +16,14 @@ fmt:
 .PHONY: clean
 clean:
 	cargo clean
-	rm -rf deps bin
+	rm -rf bin deps wit/deps
 
 wit/deps: wkg.toml wit/*.wit
 	wkg wit fetch
 
 deps/a-skua/koyomi.wasm:
 	@mkdir -p $(dir $@)
-	wkg oci pull -o $@ ghcr.io/a-skua/koyomi:0.1.0-component
+	wkg oci pull -o $@ ghcr.io/a-skua/koyomi:0.1.1-component
 
 deps/example/convert.wasm: $(RELEASE_BUILD)
 	@mkdir -p $(dir $@)

@@ -1,5 +1,5 @@
-package example:convert@0.1.0;
+package example:convert@0.1.1;
 
 world app {
-    import a-skua:koyomi/convert@0.1.0;
+    import a-skua:koyomi/convert@0.1.1;
 }

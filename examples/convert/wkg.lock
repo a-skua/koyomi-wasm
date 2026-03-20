@@ -7,6 +7,6 @@ name = "a-skua:koyomi"
 registry = "ghcr.io"
 
 [[packages.versions]]
-requirement = "=0.1.0"
-version = "0.1.0"
-digest = "sha256:22500f796abab8e6a13fef352fbe868024973babf8ba33dffb55fe363ee7d11a"
+requirement = "=0.1.1"
+version = "0.1.1"
+digest = "sha256:ca8fc51716a29e9db4bf06c968e584184dcb8cc0162ad927df24705294dc85a0"
