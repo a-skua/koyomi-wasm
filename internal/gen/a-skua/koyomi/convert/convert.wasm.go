@@ -6,30 +6,30 @@ import (
 	"go.bytecodealliance.org/cm"
 )
 
-// This file contains wasmimport and wasmexport declarations for "a-skua:koyomi@0.1.0".
+// This file contains wasmimport and wasmexport declarations for "a-skua:koyomi@0.1.1".
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-new]western-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-new]western-date
 //go:noescape
 func wasmimport_WesternDateResourceNew(rep0 uint32) (result0 uint32)
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-rep]western-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-rep]western-date
 //go:noescape
 func wasmimport_WesternDateResourceRep(self0 uint32) (result0 uint32)
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-drop]western-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-drop]western-date
 //go:noescape
 func wasmimport_WesternDateResourceDrop(self0 uint32)
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[dtor]western-date
-//export a-skua:koyomi/convert@0.1.0#[dtor]western-date
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[dtor]western-date
+//export a-skua:koyomi/convert@0.1.1#[dtor]western-date
 func wasmexport_WesternDateDestructor(self0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	Exports.WesternDate.Destructor(self)
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[constructor]western-date
-//export a-skua:koyomi/convert@0.1.0#[constructor]western-date
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[constructor]western-date
+//export a-skua:koyomi/convert@0.1.1#[constructor]western-date
 func wasmexport_Constructor(year0 uint32, month0 uint32, day0 uint32) (result0 uint32) {
 	year := (int32)((uint32)(year0))
 	month := (Month)((uint32)(month0))
@@ -39,8 +39,8 @@ func wasmexport_Constructor(year0 uint32, month0 uint32, day0 uint32) (result0 u
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]western-date.day
-//export a-skua:koyomi/convert@0.1.0#[method]western-date.day
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]western-date.day
+//export a-skua:koyomi/convert@0.1.1#[method]western-date.day
 func wasmexport_WesternDateDay(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WesternDate.Day(self)
@@ -48,8 +48,8 @@ func wasmexport_WesternDateDay(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]western-date.month
-//export a-skua:koyomi/convert@0.1.0#[method]western-date.month
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]western-date.month
+//export a-skua:koyomi/convert@0.1.1#[method]western-date.month
 func wasmexport_WesternDateMonth(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WesternDate.Month(self)
@@ -57,8 +57,8 @@ func wasmexport_WesternDateMonth(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]western-date.to-string
-//export a-skua:koyomi/convert@0.1.0#[method]western-date.to-string
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]western-date.to-string
+//export a-skua:koyomi/convert@0.1.1#[method]western-date.to-string
 func wasmexport_WesternDateToString(self0 uint32) (result *string) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result_ := Exports.WesternDate.ToString(self)
@@ -66,8 +66,8 @@ func wasmexport_WesternDateToString(self0 uint32) (result *string) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]western-date.to-wareki
-//export a-skua:koyomi/convert@0.1.0#[method]western-date.to-wareki
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]western-date.to-wareki
+//export a-skua:koyomi/convert@0.1.1#[method]western-date.to-wareki
 func wasmexport_WesternDateToWareki(self0 uint32) (result *cm.Result[string, WarekiDate, string]) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result_ := Exports.WesternDate.ToWareki(self)
@@ -75,8 +75,8 @@ func wasmexport_WesternDateToWareki(self0 uint32) (result *cm.Result[string, War
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]western-date.year
-//export a-skua:koyomi/convert@0.1.0#[method]western-date.year
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]western-date.year
+//export a-skua:koyomi/convert@0.1.1#[method]western-date.year
 func wasmexport_WesternDateYear(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WesternDate.Year(self)
@@ -84,28 +84,28 @@ func wasmexport_WesternDateYear(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-new]wareki-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-new]wareki-date
 //go:noescape
 func wasmimport_WarekiDateResourceNew(rep0 uint32) (result0 uint32)
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-rep]wareki-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-rep]wareki-date
 //go:noescape
 func wasmimport_WarekiDateResourceRep(self0 uint32) (result0 uint32)
 
-//go:wasmimport [export]a-skua:koyomi/convert@0.1.0 [resource-drop]wareki-date
+//go:wasmimport [export]a-skua:koyomi/convert@0.1.1 [resource-drop]wareki-date
 //go:noescape
 func wasmimport_WarekiDateResourceDrop(self0 uint32)
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[dtor]wareki-date
-//export a-skua:koyomi/convert@0.1.0#[dtor]wareki-date
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[dtor]wareki-date
+//export a-skua:koyomi/convert@0.1.1#[dtor]wareki-date
 func wasmexport_WarekiDateDestructor(self0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	Exports.WarekiDate.Destructor(self)
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[constructor]wareki-date
-//export a-skua:koyomi/convert@0.1.0#[constructor]wareki-date
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[constructor]wareki-date
+//export a-skua:koyomi/convert@0.1.1#[constructor]wareki-date
 func wasmexport_Constructor_(era0 uint32, year0 uint32, month0 uint32, day0 uint32) (result0 uint32) {
 	era := (Era)((uint32)(era0))
 	year := (int32)((uint32)(year0))
@@ -116,8 +116,8 @@ func wasmexport_Constructor_(era0 uint32, year0 uint32, month0 uint32, day0 uint
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.day
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.day
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.day
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.day
 func wasmexport_WarekiDateDay(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WarekiDate.Day(self)
@@ -125,8 +125,8 @@ func wasmexport_WarekiDateDay(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.era
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.era
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.era
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.era
 func wasmexport_WarekiDateEra(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WarekiDate.Era(self)
@@ -134,8 +134,8 @@ func wasmexport_WarekiDateEra(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.month
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.month
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.month
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.month
 func wasmexport_WarekiDateMonth(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WarekiDate.Month(self)
@@ -143,8 +143,8 @@ func wasmexport_WarekiDateMonth(self0 uint32) (result0 uint32) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.to-seireki
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.to-seireki
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.to-seireki
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.to-seireki
 func wasmexport_WarekiDateToSeireki(self0 uint32) (result *cm.Result[string, WesternDate, string]) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result_ := Exports.WarekiDate.ToSeireki(self)
@@ -152,8 +152,8 @@ func wasmexport_WarekiDateToSeireki(self0 uint32) (result *cm.Result[string, Wes
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.to-string
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.to-string
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.to-string
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.to-string
 func wasmexport_WarekiDateToString(self0 uint32) (result *string) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result_ := Exports.WarekiDate.ToString(self)
@@ -161,8 +161,8 @@ func wasmexport_WarekiDateToString(self0 uint32) (result *string) {
 	return
 }
 
-//go:wasmexport a-skua:koyomi/convert@0.1.0#[method]wareki-date.year
-//export a-skua:koyomi/convert@0.1.0#[method]wareki-date.year
+//go:wasmexport a-skua:koyomi/convert@0.1.1#[method]wareki-date.year
+//export a-skua:koyomi/convert@0.1.1#[method]wareki-date.year
 func wasmexport_WarekiDateYear(self0 uint32) (result0 uint32) {
 	self := cm.Reinterpret[cm.Rep]((uint32)(self0))
 	result := Exports.WarekiDate.Year(self)

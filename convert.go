@@ -75,7 +75,7 @@ func westernDateToWareki(self cm.Rep) cm.Result[string, convert.WarekiDate, stri
 	era, year := d.YearEraString()
 	convertEra, ok := eraStringToConvert(era)
 	if !ok {
-		return cm.Err[cm.Result[string, convert.WarekiDate, string]]("unsupported date: era not found")
+		return cm.Err[cm.Result[string, convert.WarekiDate, string]](fmt.Sprintf("unsupported era: %s", era))
 	}
 
 	_ = convertEra
@@ -132,7 +132,7 @@ func warekiDateToString(self cm.Rep) string {
 func warekiDateToSeireki(self cm.Rep) cm.Result[string, convert.WesternDate, string] {
 	d := warekiDates[self]
 	if d.IsZero() {
-		return cm.Err[cm.Result[string, convert.WesternDate, string]]("invalid wareki date")
+		return cm.Err[cm.Result[string, convert.WesternDate, string]](fmt.Sprintf("invalid wareki date: %v", d))
 	}
 
 	westernRep := newRep()

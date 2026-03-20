@@ -6,9 +6,9 @@ import (
 	"go.bytecodealliance.org/cm"
 )
 
-// Exports represents the caller-defined exports from "a-skua:koyomi/convert@0.1.0".
+// Exports represents the caller-defined exports from "a-skua:koyomi/convert@0.1.1".
 var Exports struct {
-	// WesternDate represents the caller-defined exports for resource "a-skua:koyomi/convert@0.1.0#western-date".
+	// WesternDate represents the caller-defined exports for resource "a-skua:koyomi/convert@0.1.1#western-date".
 	WesternDate struct {
 		// Destructor represents the caller-defined, exported destructor for resource "western-date".
 		//
@@ -46,7 +46,7 @@ var Exports struct {
 		Year func(self cm.Rep) (result int32)
 	}
 
-	// WarekiDate represents the caller-defined exports for resource "a-skua:koyomi/convert@0.1.0#wareki-date".
+	// WarekiDate represents the caller-defined exports for resource "a-skua:koyomi/convert@0.1.1#wareki-date".
 	WarekiDate struct {
 		// Destructor represents the caller-defined, exported destructor for resource "wareki-date".
 		//
